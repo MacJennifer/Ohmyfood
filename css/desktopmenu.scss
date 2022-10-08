@@ -1,0 +1,112 @@
+@media  screen and (min-width: 991.9px){
+
+
+
+
+header{
+    justify-content: center;
+    align-items: center; 
+    height: 83px; 
+
+}
+    header .logo img{
+    
+        width: 300px;
+        margin:0;  
+        padding: 0;  
+         
+}
+header a .fa-sharp{
+
+color: transparent;
+margin: 0;
+}
+.titre .image .description h1{
+
+    font-size: 35px;
+    width: 70%;
+    justify-content: center;
+    
+}
+.titre .image .description .coeur .fa-regular {
+
+    font-size: 30px;
+}
+.titre .image .description .coeur .fa-solid{
+
+    font-size: 30px;
+}
+.titre .image .description .coeur {
+
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+}
+#menu {
+
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+   
+   
+}
+#menu .entrees{
+
+
+  width: 30%;
+    margin: 0;
+    padding: 0;
+   
+   
+}
+#menu .plats {
+
+    width: 30%;
+    margin: 0;
+    padding: 0;
+   
+}
+#menu .desserts {
+
+    width: 30%;
+    margin: 0;
+    padding: 0;
+   
+}
+.bouton{
+    display:flex;
+   /* flex-direction: row;*/
+    
+    
+    width:100%;
+    margin: 0;
+    padding: 0;
+}
+.bouton .button {
+
+   
+    width: 100%;
+    font-size: 195px;
+    margin: 0;
+    padding-left: 100px;
+    
+    
+    
+    border-radius: 35px ;
+    
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

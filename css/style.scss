@@ -1,0 +1,391 @@
+@import '_variables.scss';
+@import '_mixins.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+* {
+
+    font-family: $text;
+    box-sizing: border-box;
+    margin: 0;
+    
+}
+/****************************** Loader spinner ********************************************/
+
+.loader {
+
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    inset: 0;
+    z-index: 1;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+    animation: disparition 3s forwards;
+    animation-delay: 3s;
+}
+
+.lettre {
+    
+    color: #9256dcfc ;
+    font-size: 40px;
+    font-family: $texttitres;
+    letter-spacing:8px;
+    animation: flash 1.2s  linear infinite;
+
+}
+@keyframes flash {
+    
+    0%{
+
+        color: #9256dcfc ;
+        text-shadow: 0 0 7px #9256dcfc ;
+    }
+    90%{
+
+        color: #ff79d9;
+        text-shadow: none;
+    }
+    100%{
+
+        color: #9256dcfc;
+        text-shadow: 0 0 7px #9256dcfc;
+
+    }     
+}
+.lettre:nth-child(1) {
+
+    animation-delay: 0.1s;
+
+}
+.lettre:nth-child(2) {
+
+    animation-delay: 0.2s;
+
+}
+.lettre:nth-child(3) {
+
+    animation-delay: 0.3s;
+
+}
+.lettre:nth-child(4) {
+
+    animation-delay: 0.4s;
+
+}
+.lettre:nth-child(5) {
+
+    animation-delay: 0.5s;
+
+}
+.lettre:nth-child(6) {
+
+    animation-delay: 0.6s;
+
+}
+.lettre:nth-child(7) {
+
+    animation-delay: 0.7s;
+
+}
+.lettre:nth-child(8) {
+
+    animation-delay: 0.8s;
+
+}
+@keyframes disparition {
+    0%{
+
+        transform: scale(1);
+    }
+    30%{
+        background-color: transparent;
+    }
+    50%{
+
+        background-color: transparent;
+    }
+    100%{
+
+        transform: scale(0);
+        background-color: transparent;
+        
+    }    
+}
+
+/************************************************ Body ***************************************/
+#page{
+
+   /* max-width: 375px;*/
+    margin: 0;   
+}
+/*********************** Header **********************/
+header {
+    
+    @include flexcomp;
+    width: 100%;
+    height: 63px;
+
+        .logo {
+            
+            @include flexcomp ;
+           
+            
+        img {
+            display: flex;
+            flex-wrap: wrap;
+            width: 40%;
+          /*  height:auto; */
+            margin: 20px 0 10px 0; 
+            object-fit: cover;
+
+            }
+        }           
+}
+/*********************** Ville *************************/
+.ville {
+    
+    width: 100%;
+    height: 45px;  
+    @include flexsimple ;
+    background-color: #f2f2f2;
+    box-shadow: inset 0 3px 3px rgba(128, 128, 128, 0.495);
+
+        i {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            flex-direction: row;
+            width: 37%;
+            margin: 0;
+            padding:13px 15px 0 0;
+        }
+        p {
+         
+           @include flexsimple ;
+           text-align: center;
+            font-size: 15px;
+            margin: 0;
+            padding-top: 13px;
+        }
+}
+ /********************** Titre *********************/   
+.titre {
+
+    width: 100%;
+    background-color: #f2f2f26a;
+    @include flexcomp;
+
+        h1 {
+            width: 100%;
+            font-size: 23px;
+            font-weight: 500;
+            font-family: $texttitres;
+            text-align: center;
+            padding-top: 28px; 
+            margin: 0 40px 0 40px;
+            @include flexcomp;         
+        }
+        p {
+            width: 100%;
+            font-weight: 100;
+            padding-top: 15px;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.696);
+            font-size: 17px;
+            @include flexcomp;
+        }
+        button {
+            @include flexcomp ;
+            font-size: 15px;
+            margin: 35px 0 40px 10px;
+            padding: 15px 20px 15px 20px;
+            background-image: linear-gradient(to bottom right,$secondaire, $primaire );
+            border: none;
+            color: white;
+            border-radius: 35px ;
+            box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.664);
+
+            &:hover {
+                
+                cursor: pointer;
+                background-image: linear-gradient(to bottom right, #ff79d9e0, #9256dce0 );
+                box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.826);
+            }       
+        }
+}
+/*************** Fonctionnement *****************/
+
+.fonctionnement {
+    
+    @include flexsimple;
+    width: 100%;
+    margin: 0;
+
+        h2 {
+            @include flexsimple;
+            width: 100%;
+            font-family: $texttitres;
+            font-size: 20px;
+            font-weight: 800;
+            margin: 35px 0 15px 15px;    
+        }
+        .boutons{
+            @include flexsimple;
+            width: 100%;
+            margin-bottom: 45px
+        }
+        .bouton{
+            @include bouton;
+               
+       .number{
+            @include number;
+        }
+        .fa-solid{
+            @include fa;
+        }
+        .etape{
+            font-size: 16px;
+        }
+    }      
+}       
+            
+/**************** Restaurants *************************/    
+.restaurants {
+    
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f2f2f26a; 
+    padding-bottom: 35px;
+
+    .choix {
+
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+        h2{
+            
+            @include flexsimple;
+            width: 100%;
+            font-family: $texttitres;
+            font-size: 20px;
+            font-weight: 800;
+            margin: 35px 0 15px 15px; 
+        }
+        .resto {
+           
+            @include flexsimple;
+            
+            margin-left: 20px;
+            margin-bottom: 20px;
+            .picture {
+
+                position: relative;
+                   
+            }       
+        img{
+
+            @include img;
+             
+         } 
+         .new{
+         
+             @include nouveauté;
+         } 
+         .nom {
+
+             @include nom;
+
+                 .endroit {
+                    
+                     @include endroit ;
+                 
+                         h3{
+                             @include h3;
+                         }
+                         p {
+                             @include restaurantP;
+                         }
+                  }
+         .coeur {
+                    
+            @include coeur;
+
+                    .fa-regular {
+
+                        @include heart;   
+                     }
+                    .fa-solid {
+
+                         @include heart;
+                         @include solid ; 
+                     }  
+                 }
+         }        
+}   } 
+                   
+
+/******************** Footer ***********************/   
+footer{
+    
+    background-color: #403d39e5; 
+    padding-bottom: 30px;
+
+   h3{
+        
+        font-family: $texttitres;
+        font-weight: 500;
+        letter-spacing: 1px;
+        color: white;
+        padding-top: 25px ;
+        margin: 0 0 20px 20px
+        
+    }
+  .proposer {
+
+        @include flexsimple;
+        color: white;
+        margin: 0 0 5px 20px;
+
+            p {
+
+                margin: 0 0 5px 20px;
+                font-weight: 600;  
+            }
+    }
+    .devenir {
+
+        @include flexsimple;
+        color: white;
+        margin: 0 0 5px 20px;
+
+            p {
+
+                margin: 0 0 5px 15px;
+                font-weight: 600;   
+            }
+    }
+    p {
+       
+        margin: 0 0 10px 20px;
+        font-weight: 600;
+        color: white;
+    
+    }
+    a {
+        margin: 0 0 5px 20px;
+        font-weight: 600;
+        color: white;
+        text-decoration: none;
+
+    }  
+}
+
+

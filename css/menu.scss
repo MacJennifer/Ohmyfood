@@ -1,0 +1,303 @@
+@import '_variables.scss';
+@import '_mixins.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+*{
+
+    margin: 0;
+    padding: 0;
+   font-family: $text;
+    box-sizing: border-box;
+
+}
+
+#page {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   /* max-width: 767.9px;*/
+    border: 2px solid red; 
+    background-color: #F6F6F6;
+   
+}
+
+@keyframes apparition {
+
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes check {
+
+    0% {
+        transform: rotate(-270deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
+/************************** header ***********************************/
+header {
+
+    border: 2px solid grey;
+    @include flexsimple;
+    padding: 20px 15px 20px 15px;
+    background-color: white;
+    width: 100%;
+    height: 63px;
+        a{
+            text-decoration: none;
+            color: black;
+             .fa-sharp {
+                
+                @include flexsimple;
+                font-size: 20px;
+                width: 20%;
+                padding: 5px 35px 0 5px ;
+               
+            }
+        }
+        .logo{
+
+            @include flexcomp;   
+            /*width: 0%;*/
+        
+                img {
+
+                    width: 208px;
+                    height: auto;
+                    object-fit: cover;
+                    @include flexcomp;
+                    padding-left: 35px;
+                }
+        }       
+}
+/************************** Titre **************************/
+.titre {
+    
+    width: 100%;
+    @include flexcomp;
+    margin: 0;
+            .image {
+
+                @include flexsimple;
+                width: 100%;
+                position: relative;
+            
+                img{
+
+                    width: 100%;
+                    height: 277px;
+                    object-fit: cover; 
+                    @include flexsimple;
+                }
+            
+            .description {
+
+                @include flexsimple;
+                width: 100%;
+                position: absolute;
+                bottom: -25px;
+                background-color: #F6F6F6;
+                border-radius: 35px 35px 0 0;
+
+                h1{
+
+                    width: 80%;
+                    @include flexsimple;
+                    font-size: 26px;
+                    font-family: $texttitres;
+                    font-weight: 400;
+                    font-style: italic;
+                    margin: 0;
+                    padding: 35px 0 10px 20px;
+                    
+                }
+                .coeur {
+
+                    width: 20%;
+                   /* border: 2px solid brown;*/
+                    display: flex;
+                
+                    .fa-regular {
+                        color: black;
+                        @include flexsimple;
+                        font-size: 25px;
+                        margin: 0;
+                        padding: 35px 0px 10px 15px;
+                        position: relative;
+                        
+                    }
+                
+                    .fa-solid {
+                        
+                        margin: 0;
+                        padding: 35px 0px 10px 15px;
+                        @include flexsimple;
+                        font-size: 25px;
+                        @include solid;
+                       
+                    }
+                }
+            }        
+        }                     
+} 
+/************************** Menu *************************/
+#menu {
+
+
+    width: 100%;
+    margin-top: 25px;
+    @include flexcomp;
+    
+    .entrees{
+
+            @include titremenu;
+
+            }  
+            .traitvert{
+
+                @include traitvert;
+     
+            }
+            .entree1{
+                    @include menu;
+                    @include animationmenu;
+                    animation: apparition 0.5s;
+                     
+                    }
+            
+            .entree2{
+                    @include menu;
+                    @include animationmenu;            
+                    animation: apparition 1s;
+                    
+            }
+            .entree3{
+                    @include menu;
+                    @include animationmenu;            
+                    animation: apparition 1.5s;
+                    
+            }
+            .entree4{
+                @include menu;
+                @include animationmenu;            
+                animation: apparition 2s;
+                
+        }
+
+            
+    .plats {
+
+        @include titremenu;
+        margin-top: 35px;
+
+            .plat1 {
+
+                @include menu;
+                @include animationmenu;
+                animation: apparition 2s;
+            }
+            .plat2{
+
+                @include menu;
+                @include animationmenu;
+                animation: apparition 2.5s;
+            }
+            .plat3 {
+
+                @include menu;
+                @include animationmenu;
+                animation: apparition 3s;
+            }
+        
+        }
+    .desserts {
+
+        @include titremenu;
+        margin-top: 35px;
+       
+        .dessert1 {
+
+            @include menu;
+            @include animationmenu;
+            animation: apparition 3.5s;
+        }
+        .dessert2 {
+
+            @include menu;
+            @include animationmenu;
+            animation: apparition 4s;
+        }
+        .dessert3{
+
+            @include menu;
+            @include animationmenu;
+            animation: apparition 4.5s;
+        }
+        
+        }
+        .check {
+
+            margin-right: -65px;
+            background-color: $tertiaire;
+            width: 65px;
+            border-radius: 0 0px 0px 0;
+            transition: margin-right 0.5s;
+            
+            i{
+                    
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: rgb(255, 255, 255);
+                border-radius: 50%;
+                margin-left: 15px;
+                margin-top:  20px;
+                padding: 0;
+                color:$tertiaire;
+                font-size: 14px;
+                width: 20px;
+                height: 20px;
+                           
+            }
+                
+        }
+        .bouton{
+            @include flexcomp;
+            width: 100%;
+        
+        button {
+
+            @include flexcomp ;
+            width: 180px;
+            font-size: 15px;
+            margin: 35px 0 60px 10px;
+            padding: 15px 20px 15px 20px;
+            background-image: linear-gradient(to bottom right,$secondaire, $primaire );
+            border: none;
+            color: white;
+            border-radius: 35px ;
+            box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.664);
+
+                &:hover {
+                    
+                    cursor: pointer;
+                    background-image: linear-gradient(to bottom right, #ff79d9e0, #9256dce0 );
+                    box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.826);
+                }    
+        }
+}}
+
+footer{
+
+    @include footer;
+    width: 100%;
+}  
+         

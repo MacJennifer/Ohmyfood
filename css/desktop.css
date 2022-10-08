@@ -1,0 +1,118 @@
+@media screen and (min-width: 991.9px) {
+  header {
+    height: 75px;
+  }
+  header .logo img {
+    width: 60%;
+  }
+  .ville {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    height: 50px;
+    padding-top: 5px;
+  }
+  .ville i {
+    font-size: 20px;
+    color: rgba(146, 86, 220, 0.9882352941);
+  }
+  .ville p {
+    font-size: 20px;
+    margin-left: 50px;
+  }
+  .titre h1 {
+    font-size: 25px;
+  }
+  .titre button {
+    width: 100%;
+    margin-right: 10px;
+    font-size: 20px;
+    background-image: none;
+    background-color: rgba(146, 86, 220, 0.5176470588);
+    color: black;
+  }
+  .fonctionnement {
+    width: 100%;
+  }
+  .fonctionnement .boutons {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .fonctionnement .bouton .fa-solid {
+    font-size: 20px;
+    margin-left: 20px;
+  }
+  .fonctionnement .bouton .etape {
+    font-size: 18px;
+    margin-left: 10px;
+  }
+  .fonctionnement .boutons .bouton {
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+    font-size: 15px;
+  }
+  .restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+  }
+  .choix .resto {
+    width: 100%;
+    overflow: hidden;
+    margin: 20px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .resto .picture img {
+    border-radius: 15px 0 0 15px;
+    width: 400px;
+  }
+  .restaurants .resto .new {
+    margin: 0;
+    transform: rotate(30deg);
+    top: 10px;
+    right: -55px;
+    width: 55%;
+    text-align: center;
+    padding-left: 30px;
+    font-size: 18px;
+  }
+  .restaurants .resto .nom {
+    border-radius: 0px 15px 15px 0;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 168px;
+  }
+  .restaurants .resto .nom .endroit h3 {
+    font-size: 22px;
+    font-weight: 300;
+    margin-top: 5px;
+    padding-left: 25px;
+  }
+  .restaurants .resto .nom .endroit p {
+    font-size: 20px;
+    margin-top: 10px;
+    padding-left: 25px;
+  }
+  .restaurants .resto .nom .coeur {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .restaurants .resto .nom .coeur .fa-regular {
+    font-size: 32px;
+    margin-top: 10px;
+  }
+  .restaurants .resto .nom .coeur .fa-solid {
+    font-size: 32px;
+    margin-top: 10px;
+  }
+}/*# sourceMappingURL=desktop.css.map */

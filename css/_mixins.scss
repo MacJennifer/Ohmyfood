@@ -1,0 +1,338 @@
+// display, position, border-radius... comme par @
+
+@mixin flexsimple {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+@mixin flex1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+@mixin flexcomp {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@mixin text {
+
+    text-align: center;
+    
+}
+/****************** Fonctionnement *************/
+
+@mixin bouton {
+       width: 90%;
+       /* width: 330px;*/
+        margin: 10px 10px 10px 20px;
+        padding: 25px 0 20px 0;
+        background-color:#f2f2f26a ;
+        border-radius: 20px;
+        box-shadow: 4px 4px 3px rgba(128, 128, 128, 0.271);
+            &:hover{
+                background-color: #9256dc15;
+                cursor: pointer; 
+                .fa-solid{
+                    color:$primaire;
+                }
+            } 
+}       
+    
+@mixin number {
+    
+        font-size: 16px;
+        color: white;
+        padding: 4px 5px 3px 7px;
+        margin-left: -10px;
+        background-color: $primaire;
+        border-radius: 50%;
+        
+
+}
+@mixin fa {
+    
+        font-size: 20px;
+        color: rgba(0, 0, 0, 0.398);
+        margin: 0 22px 0 20px;
+    
+}
+
+  /******************************* Restaurant ********************************/
+  
+  
+  @mixin restaurants {
+    
+    display: block;
+    width: 100%;
+    
+
+}
+@mixin img{
+
+    width: 330px;
+    height: 170px;
+    object-fit:cover;
+  /*  margin-left: 12px;*/
+  margin: 0;
+    @include flexsimple;
+   /* position: absolute;*/
+    border-radius: 15px 15px 0 0 ;
+    
+} 
+
+@mixin nouveauté {
+            
+    position: absolute;
+    background-color:$tertiaire;
+    color: #0b8365;
+   /* margin: 10px 0 0 250px;*/
+   right: 10px;
+   top: 10px;
+    padding: 7px; 
+    font-weight: 700;
+    border-radius: 3px  
+
+} 
+@mixin nom {
+    @include flexsimple;
+    width:330px;
+    margin: 0;
+    background-color: white;
+    box-shadow:3px 3px 2px rgba(128, 128, 128, 0.139); 
+    border-radius: 0 0 15px 15px;
+    
+  
+    
+}
+@mixin endroit {
+
+    display: block;
+    flex-direction: column;
+    width: 80%;
+    margin: 0;
+}
+@mixin  h3{
+
+    font-family: $texttitres;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    padding: 10px 0 0 20px;
+    @include flexsimple;
+    width: 100%;
+}
+@mixin restaurantP {
+
+    font-size: 15px;
+    padding: 5px 0 0 20px;  
+    margin-bottom: 13px;
+}
+@mixin coeur {
+    
+   width: 20%;
+    @include flexsimple;
+}
+@mixin heart {
+
+    color: black;
+    font-size: 25px;
+    /*$width:0%;*/
+    display: flex;
+    flex-wrap: wrap;
+    padding: 18px 0 0 15px;
+    position: relative;
+    
+}  
+@mixin solid {
+    
+    color: transparent;
+    position: absolute;
+     background-image: linear-gradient(to top left , $primaire, $secondaire );
+     background-clip: text;
+     -webkit-background-clip: text;
+     opacity: 0;
+         &:hover{
+             background-image: linear-gradient(to left top, to left bottom, $secondaire , $primaire );
+             opacity: 1;
+             cursor: pointer;
+         }   
+              
+} 
+/*@mixin hoversolid {
+    
+        background-image: linear-gradient(to left top, to left bottom, $secondaire , $primaire );
+        opacity: 1;
+        cursor: pointer;
+       
+}     
+ */  
+/****************************************** Page palette du goût *****************************************/
+
+@mixin traitvert {
+
+    width: 45px;
+    height: 3px;
+    background-color: $tertiaire ;
+    margin:5px 0 15px 15px;
+}
+@mixin titremenu {
+    
+        width: 100%;
+        margin-top:20px;
+
+            h2{
+
+                font-size: 18px;
+                font-weight: 100;
+                margin-left: 15px;
+                
+            }
+            
+}
+@mixin menu {
+    
+        margin: 10px 0 15px 15px;
+        width: 92%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: rgb(255, 255, 255);
+        border-radius: 15px;
+        box-shadow: 1px 3px 3px rgba(128, 128, 128, 0.465);
+        overflow: hidden;
+            
+        .descriptif{
+
+            display: block;
+            margin: 0;
+            padding: 10px;
+            width: 85%;
+            overflow: hidden;
+               
+            h3{
+                
+                margin: 0;
+                padding:0;
+                font-size: 16px;
+                font-weight: 500;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                   
+            } 
+            p{
+               
+                width: 100%;
+                margin-top: 5px;
+                font-size: 14px; 
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                               
+            }
+        }    
+            .prix {
+               
+                display: flex;
+                flex-wrap: wrap;    
+                margin-right: 3px;
+                padding: 25px 0 0 20px;
+                width: 23%;
+            
+                    span{
+
+                        display:flex ;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        font-weight: 600;
+                        font-size: 16px;
+                    }
+                    
+            }
+}
+@mixin animationmenu {
+  
+    &:hover .check  {
+        cursor: pointer;
+        margin-right: 0;
+
+        i {
+            animation: check 1s ;
+        }
+    }
+    
+}
+
+@mixin footer{
+    
+    
+        width: 100%;
+     background-color: #28282bee; 
+     padding-bottom: 30px;
+    
+ 
+    h3{
+         width: 90%;
+         font-family: $texttitres;
+         font-weight: 500;
+         letter-spacing: 1px;
+         color: white;
+         padding: 25px 0 0px 0px;
+         margin: 0 0 20px 20px
+         
+     }
+   .proposer {
+ 
+         @include flexsimple;
+         color: white;
+         margin: 0 0 5px 20px;
+ 
+             p {
+ 
+                 margin: 0 0 5px 20px;
+                 font-weight: 600;
+                
+             }
+     }
+     .devenir {
+ 
+         @include flexsimple;
+         color: white;
+         margin: 0 0 5px 20px;
+ 
+             p {
+ 
+                 margin: 0 0 5px 15px;
+                 font-weight: 600;
+                 
+             }
+     }
+     p {
+        
+         margin: 0 0 10px 20px;
+         font-weight: 600;
+         color: white;
+     
+     }
+     a {
+         margin: 0 0 5px 20px;
+         font-weight: 600;
+         color: white;
+         text-decoration: none;
+ 
+    
+        }  
+}  
+  
+    
+
+
+

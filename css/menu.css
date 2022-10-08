@@ -1,0 +1,918 @@
+@charset "UTF-8";
+/****************** Fonctionnement *************/
+/******************************* Restaurant ********************************/
+/*@mixin hoversolid {
+
+        background-image: linear-gradient(to left top, to left bottom, $secondaire , $primaire );
+        opacity: 1;
+        cursor: pointer;
+
+}     
+ */
+/****************************************** Page palette du goût *****************************************/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  box-sizing: border-box;
+}
+
+#page {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* max-width: 767.9px;*/
+  border: 2px solid red;
+  background-color: #F6F6F6;
+}
+
+@-webkit-keyframes apparition {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes apparition {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes check {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes check {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+/************************** header ***********************************/
+header {
+  border: 2px solid grey;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 15px 20px 15px;
+  background-color: white;
+  width: 100%;
+  height: 63px;
+}
+header a {
+  text-decoration: none;
+  color: black;
+}
+header a .fa-sharp {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 20px;
+  width: 20%;
+  padding: 5px 35px 0 5px;
+}
+header .logo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /*width: 0%;*/
+}
+header .logo img {
+  width: 208px;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-left: 35px;
+}
+
+/************************** Titre **************************/
+.titre {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.titre .image {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+}
+.titre .image img {
+  width: 100%;
+  height: 277px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: flex;
+  flex-wrap: wrap;
+}
+.titre .image .description {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  position: absolute;
+  bottom: -25px;
+  background-color: #F6F6F6;
+  border-radius: 35px 35px 0 0;
+}
+.titre .image .description h1 {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 26px;
+  font-family: Shrikhand, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0;
+  padding: 35px 0 10px 20px;
+}
+.titre .image .description .coeur {
+  width: 20%;
+  /* border: 2px solid brown;*/
+  display: flex;
+}
+.titre .image .description .coeur .fa-regular {
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 25px;
+  margin: 0;
+  padding: 35px 0px 10px 15px;
+  position: relative;
+}
+.titre .image .description .coeur .fa-solid {
+  margin: 0;
+  padding: 35px 0px 10px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 25px;
+  color: transparent;
+  position: absolute;
+  background-image: linear-gradient(to top left, rgba(146, 86, 220, 0.9882352941), #ff79d9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+}
+.titre .image .description .coeur .fa-solid:hover {
+  background-image: linear-gradient(to left top, to left bottom, #ff79d9, rgba(146, 86, 220, 0.9882352941));
+  opacity: 1;
+  cursor: pointer;
+}
+
+/************************** Menu *************************/
+#menu {
+  width: 100%;
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#menu .entrees {
+  width: 100%;
+  margin-top: 20px;
+}
+#menu .entrees h2 {
+  font-size: 18px;
+  font-weight: 100;
+  margin-left: 15px;
+}
+#menu .traitvert {
+  width: 45px;
+  height: 3px;
+  background-color: #99E2D0;
+  margin: 5px 0 15px 15px;
+}
+#menu .entree1 {
+  margin: 10px 0 15px 15px;
+  width: 92%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  box-shadow: 1px 3px 3px rgba(128, 128, 128, 0.465);
+  overflow: hidden;
+  -webkit-animation: apparition 0.5s;
+          animation: apparition 0.5s;
+}
+#menu .entree1 .descriptif {
+  display: block;
+  margin: 0;
+  padding: 10px;
+  width: 85%;
+  overflow: hidden;
+}
+#menu .entree1 .descriptif h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#menu .entree1 .descriptif p {
+  width: 100%;
+  margin-top: 5px;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#menu .entree1 .prix {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 3px;
+  padding: 25px 0 0 20px;
+  width: 23%;
+}
+#menu .entree1 .prix span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+}
+#menu .entree1:hover .check {
+  cursor: pointer;
+  margin-right: 0;
+}
+#menu .entree1:hover .check i {
+  -webkit-animation: check 1s;
+          animation: check 1s;
+}
+#menu .entree2 {
+  margin: 10px 0 15px 15px;
+  width: 92%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  box-shadow: 1px 3px 3px rgba(128, 128, 128, 0.465);
+  overflow: hidden;
+  -webkit-animation: apparition 1s;
+          animation: apparition 1s;
+}
+#menu .entree2 .descriptif {
+  display: block;
+  margin: 0;
+  padding: 10px;
+  width: 85%;
+  overflow: hidden;
+}
+#menu .entree2 .descriptif h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#menu .entree2 .descriptif p {
+  width: 100%;
+  margin-top: 5px;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#menu .entree2 .prix {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 3px;
+  padding: 25px 0 0 20px;
+  width: 23%;
+}
+#menu .entree2 .prix span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+}
+#menu .entree2:hover .check {
+  cursor: pointer;
+  margin-right: 0;
+}
+#menu .entree2:hover .check i {
+  -webkit-animation: check 1s;
+          animation: check 1s;
+}
+#menu .entree3 {
+  margin: 10px 0 15px 15px;
+  width: 92%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  box-shadow: 1px 3px 3px rgba(128, 128, 128, 0.465);
+  overflow: hidden;
+  -webkit-animation: apparition 1.5s;
+          animation: apparition 1.5s;
+}
+#menu .entree3 .descriptif {
+  display: block;
+  margin: 0;
+  padding: 10px;
+  width: 85%;
+  overflow: hidden;
+}
+#menu .entree3 .descriptif h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#menu .entree3 .descriptif p {
+  width: 100%;
+  margin-top: 5px;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#menu .entree3 .prix {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 3px;
+  padding: 25px 0 0 20px;
+  width: 23%;
+}
+#menu .entree3 .prix span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+}
+#menu .entree3:hover .check {
+  cursor: pointer;
+  margin-right: 0;
+}
+#menu .entree3:hover .check i {
+  -webkit-animation: check 1s;
+          animation: check 1s;
+}
+#menu .entree4 {
+  margin: 10px 0 15px 15px;
+  width: 92%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  box-shadow: 1px 3px 3px rgba(128, 128, 128, 0.465);
+  overflow: hidden;
+  -webkit-animation: apparition 2s;
+          animation: apparition 2s;
+}
+#menu .entree4 .descriptif {
+  display: block;
+  margin: 0;
+  padding: 10px;
+  width: 85%;
+  overflow: hidden;
+}
+#menu .entree4 .descriptif h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#menu .entree4 .descriptif p {
+  width: 100%;
+  margin-top: 5px;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#menu .entree4 .prix {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 3px;
+  padding: 25px 0 0 20px;
+  width: 23%;
+}
+#menu .entree4 .prix span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+}
+#menu .entree4:hover .check {
+  cursor: pointer;
+  margin-right: 0;
+}
+#menu .entree4:hover .check i {
+  -webkit-animation: check 1s;
+          animation: check 1s;
+}
+#menu .plats {
+  width: 100%;
+  margin-top: 20px;
+  margin-top: 35px;
+}
+#menu .plats h2 {
+  font-size: 18px;
+  font-weight: 100;
+  margin-left: 15px;
+}
+#menu .plats .plat1 {
+  margin: 10px 0 15px 15px;
+  width: 92%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  box-shadow: 1px 3px 3px rgba(128, 128, 128, 0.465);
+  overflow: hidden;
+  -webkit-animation: apparition 2s;
+          animation: apparition 2s;
+}
+#menu .plats .plat1 .descriptif {
+  display: block;
+  margin: 0;
+  padding: 10px;
+  width: 85%;
+  overflow: hidden;
+}
+#menu .plats .plat1 .descriptif h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#menu .plats .plat1 .descriptif p {
+  width: 100%;
+  margin-top: 5px;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#menu .plats .plat1 .prix {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 3px;
+  padding: 25px 0 0 20px;
+  width: 23%;
+}
+#menu .plats .plat1 .prix span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+}
+#menu .plats .plat1:hover .check {
+  cursor: pointer;
+  margin-right: 0;
+}
+#menu .plats .plat1:hover .check i {
+  -webkit-animation: check 1s;
+          animation: check 1s;
+}
+#menu .plats .plat2 {
+  margin: 10px 0 15px 15px;
+  width: 92%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  box-shadow: 1px 3px 3px rgba(128, 128, 128, 0.465);
+  overflow: hidden;
+  -webkit-animation: apparition 2.5s;
+          animation: apparition 2.5s;
+}
+#menu .plats .plat2 .descriptif {
+  display: block;
+  margin: 0;
+  padding: 10px;
+  width: 85%;
+  overflow: hidden;
+}
+#menu .plats .plat2 .descriptif h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#menu .plats .plat2 .descriptif p {
+  width: 100%;
+  margin-top: 5px;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#menu .plats .plat2 .prix {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 3px;
+  padding: 25px 0 0 20px;
+  width: 23%;
+}
+#menu .plats .plat2 .prix span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+}
+#menu .plats .plat2:hover .check {
+  cursor: pointer;
+  margin-right: 0;
+}
+#menu .plats .plat2:hover .check i {
+  -webkit-animation: check 1s;
+          animation: check 1s;
+}
+#menu .plats .plat3 {
+  margin: 10px 0 15px 15px;
+  width: 92%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  box-shadow: 1px 3px 3px rgba(128, 128, 128, 0.465);
+  overflow: hidden;
+  -webkit-animation: apparition 3s;
+          animation: apparition 3s;
+}
+#menu .plats .plat3 .descriptif {
+  display: block;
+  margin: 0;
+  padding: 10px;
+  width: 85%;
+  overflow: hidden;
+}
+#menu .plats .plat3 .descriptif h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#menu .plats .plat3 .descriptif p {
+  width: 100%;
+  margin-top: 5px;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#menu .plats .plat3 .prix {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 3px;
+  padding: 25px 0 0 20px;
+  width: 23%;
+}
+#menu .plats .plat3 .prix span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+}
+#menu .plats .plat3:hover .check {
+  cursor: pointer;
+  margin-right: 0;
+}
+#menu .plats .plat3:hover .check i {
+  -webkit-animation: check 1s;
+          animation: check 1s;
+}
+#menu .desserts {
+  width: 100%;
+  margin-top: 20px;
+  margin-top: 35px;
+}
+#menu .desserts h2 {
+  font-size: 18px;
+  font-weight: 100;
+  margin-left: 15px;
+}
+#menu .desserts .dessert1 {
+  margin: 10px 0 15px 15px;
+  width: 92%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  box-shadow: 1px 3px 3px rgba(128, 128, 128, 0.465);
+  overflow: hidden;
+  -webkit-animation: apparition 3.5s;
+          animation: apparition 3.5s;
+}
+#menu .desserts .dessert1 .descriptif {
+  display: block;
+  margin: 0;
+  padding: 10px;
+  width: 85%;
+  overflow: hidden;
+}
+#menu .desserts .dessert1 .descriptif h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#menu .desserts .dessert1 .descriptif p {
+  width: 100%;
+  margin-top: 5px;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#menu .desserts .dessert1 .prix {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 3px;
+  padding: 25px 0 0 20px;
+  width: 23%;
+}
+#menu .desserts .dessert1 .prix span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+}
+#menu .desserts .dessert1:hover .check {
+  cursor: pointer;
+  margin-right: 0;
+}
+#menu .desserts .dessert1:hover .check i {
+  -webkit-animation: check 1s;
+          animation: check 1s;
+}
+#menu .desserts .dessert2 {
+  margin: 10px 0 15px 15px;
+  width: 92%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  box-shadow: 1px 3px 3px rgba(128, 128, 128, 0.465);
+  overflow: hidden;
+  -webkit-animation: apparition 4s;
+          animation: apparition 4s;
+}
+#menu .desserts .dessert2 .descriptif {
+  display: block;
+  margin: 0;
+  padding: 10px;
+  width: 85%;
+  overflow: hidden;
+}
+#menu .desserts .dessert2 .descriptif h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#menu .desserts .dessert2 .descriptif p {
+  width: 100%;
+  margin-top: 5px;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#menu .desserts .dessert2 .prix {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 3px;
+  padding: 25px 0 0 20px;
+  width: 23%;
+}
+#menu .desserts .dessert2 .prix span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+}
+#menu .desserts .dessert2:hover .check {
+  cursor: pointer;
+  margin-right: 0;
+}
+#menu .desserts .dessert2:hover .check i {
+  -webkit-animation: check 1s;
+          animation: check 1s;
+}
+#menu .desserts .dessert3 {
+  margin: 10px 0 15px 15px;
+  width: 92%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  box-shadow: 1px 3px 3px rgba(128, 128, 128, 0.465);
+  overflow: hidden;
+  -webkit-animation: apparition 4.5s;
+          animation: apparition 4.5s;
+}
+#menu .desserts .dessert3 .descriptif {
+  display: block;
+  margin: 0;
+  padding: 10px;
+  width: 85%;
+  overflow: hidden;
+}
+#menu .desserts .dessert3 .descriptif h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#menu .desserts .dessert3 .descriptif p {
+  width: 100%;
+  margin-top: 5px;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#menu .desserts .dessert3 .prix {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 3px;
+  padding: 25px 0 0 20px;
+  width: 23%;
+}
+#menu .desserts .dessert3 .prix span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+}
+#menu .desserts .dessert3:hover .check {
+  cursor: pointer;
+  margin-right: 0;
+}
+#menu .desserts .dessert3:hover .check i {
+  -webkit-animation: check 1s;
+          animation: check 1s;
+}
+#menu .check {
+  margin-right: -65px;
+  background-color: #99E2D0;
+  width: 65px;
+  border-radius: 0 0px 0px 0;
+  transition: margin-right 0.5s;
+}
+#menu .check i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  margin-left: 15px;
+  margin-top: 20px;
+  padding: 0;
+  color: #99E2D0;
+  font-size: 14px;
+  width: 20px;
+  height: 20px;
+}
+#menu .bouton {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+#menu .bouton button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  font-size: 15px;
+  margin: 35px 0 60px 10px;
+  padding: 15px 20px 15px 20px;
+  background-image: linear-gradient(to bottom right, #ff79d9, rgba(146, 86, 220, 0.9882352941));
+  border: none;
+  color: white;
+  border-radius: 35px;
+  box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.664);
+}
+#menu .bouton button:hover {
+  cursor: pointer;
+  background-image: linear-gradient(to bottom right, rgba(255, 121, 217, 0.8784313725), rgba(146, 86, 220, 0.8784313725));
+  box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.826);
+}
+
+footer {
+  width: 100%;
+  background-color: rgba(40, 40, 43, 0.9333333333);
+  padding-bottom: 30px;
+  width: 100%;
+}
+footer h3 {
+  width: 90%;
+  font-family: Shrikhand, sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: white;
+  padding: 25px 0 0px 0px;
+  margin: 0 0 20px 20px;
+}
+footer .proposer {
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  margin: 0 0 5px 20px;
+}
+footer .proposer p {
+  margin: 0 0 5px 20px;
+  font-weight: 600;
+}
+footer .devenir {
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  margin: 0 0 5px 20px;
+}
+footer .devenir p {
+  margin: 0 0 5px 15px;
+  font-weight: 600;
+}
+footer p {
+  margin: 0 0 10px 20px;
+  font-weight: 600;
+  color: white;
+}
+footer a {
+  margin: 0 0 5px 20px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+}/*# sourceMappingURL=menu.css.map */
