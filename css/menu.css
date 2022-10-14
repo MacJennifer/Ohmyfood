@@ -24,7 +24,6 @@
   padding: 0;
   box-sizing: border-box;
   /* max-width: 767.9px;*/
-  border: 2px solid red;
   background-color: #F6F6F6;
 }
 
@@ -63,7 +62,6 @@
 }
 /************************** header ***********************************/
 header {
-  border: 2px solid grey;
   display: flex;
   flex-wrap: wrap;
   padding: 20px 15px 20px 15px;
@@ -172,7 +170,7 @@ header .logo img {
   opacity: 0;
 }
 .titre .image .description .coeur .fa-solid:hover {
-  background-image: linear-gradient(to left top, to left bottom, #ff79d9, rgba(146, 86, 220, 0.9882352941));
+  background-image: linear-gradient(to left top, #ff79d9, rgba(146, 86, 220, 0.9882352941));
   opacity: 1;
   cursor: pointer;
 }

@@ -268,7 +268,9 @@ header {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-
+        align-items: center;
+       
+        
     }
         h2{
             
@@ -282,9 +284,9 @@ header {
         .resto {
            
             @include flexsimple;
-            
-            margin-left: 20px;
+            margin-left: auto;
             margin-bottom: 20px;
+           justify-content: center;
             .picture {
 
                 position: relative;

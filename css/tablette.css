@@ -1,4 +1,4 @@
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
   /***************** header *******************/
   header {
     height: 75px;
@@ -16,7 +16,7 @@
   }
   .ville i {
     font-size: 20px;
-    color: rgba(146, 86, 220, 0.9882352941);
+    color: black;
   }
   .ville p {
     font-size: 20px;
@@ -30,10 +30,15 @@
     width: 100%;
     margin-right: 10px;
     font-size: 20px;
-    background-image: none;
-    background-color: white;
-    border: 2px solid rgba(146, 86, 220, 0.9882352941);
-    color: black;
+    background-image: linear-gradient(to bottom right, rgba(146, 86, 220, 0.8784313725), rgba(255, 121, 217, 0.8784313725));
+    color: white;
+    border-radius: 35px;
+    box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.664);
+  }
+  button:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to bottom right, rgba(255, 121, 217, 0.8784313725), rgba(146, 86, 220, 0.8784313725));
+    box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.826);
   }
   /******************** fonctionnement **************************/
   .fonctionnement h2 {

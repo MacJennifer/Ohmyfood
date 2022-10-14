@@ -14,7 +14,7 @@
   }
   .ville i {
     font-size: 20px;
-    color: rgba(146, 86, 220, 0.9882352941);
+    color: black;
   }
   .ville p {
     font-size: 20px;
@@ -27,9 +27,15 @@
     width: 100%;
     margin-right: 10px;
     font-size: 20px;
-    background-image: none;
-    background-color: rgba(146, 86, 220, 0.5176470588);
-    color: black;
+    background-image: linear-gradient(to bottom right, rgba(146, 86, 220, 0.8784313725), rgba(255, 121, 217, 0.8784313725));
+    color: white;
+    border-radius: 35px;
+    box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.664);
+  }
+  button :hover {
+    cursor: pointer;
+    background-image: linear-gradient(to bottom right, rgba(255, 121, 217, 0.8784313725), rgba(146, 86, 220, 0.8784313725));
+    box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.826);
   }
   .fonctionnement {
     width: 100%;

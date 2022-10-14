@@ -1,13 +1,10 @@
 @media  screen and (min-width: 991.9px){
 
-
-
-
 header{
     justify-content: center;
     align-items: center; 
     height: 83px; 
-
+    
 }
     header .logo img{
     
@@ -18,15 +15,21 @@ header{
 }
 header a .fa-sharp{
 
-color: transparent;
-margin: 0;
+    color: transparent;
+    margin: 0;
 }
+
 .titre .image .description h1{
 
     font-size: 35px;
     width: 70%;
     justify-content: center;
-    
+       
+}
+.titre .image img {
+
+    width: 100%;
+    height: 507px;
 }
 .titre .image .description .coeur .fa-regular {
 
@@ -46,58 +49,51 @@ margin: 0;
 
     width: 100%;
     display: flex;
-    margin-top: 30px;
+    margin-top: 50px;
    
    
 }
 #menu .entrees{
 
-
-  width: 30%;
+    width: 30%;
     margin: 0;
     padding: 0;
-   
-   
+     
 }
 #menu .plats {
 
     width: 30%;
     margin: 0;
     padding: 0;
-   
+     
 }
 #menu .desserts {
 
     width: 30%;
     margin: 0;
     padding: 0;
-   
+      
 }
 .bouton{
+
     display:flex;
-   /* flex-direction: row;*/
-    
-    
-    width:100%;
-    margin: 0;
-    padding: 0;
-}
+     width:100%;
+     margin: 0;
+     padding: 0;
+} 
+
 .bouton .button {
 
-   
     width: 100%;
     font-size: 195px;
     margin: 0;
-    padding-left: 100px;
-    
-    
-    
+    padding-left: 100px;   
     border-radius: 35px ;
-    
-}
+        
 }
 
 
+}
 
 
 

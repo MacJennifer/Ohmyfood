@@ -1,4 +1,4 @@
-@media  screen and (min-width: 768px) and (max-width: 992px) {
+@media  screen and (min-width: 768px) and (max-width: 991.9px) {
 
 /***************** header *******************/
 header {
@@ -22,7 +22,7 @@ header .logo img{
 .ville i {
 
     font-size: 20px;
-    color: #9256dcfc;
+    color: black;
 }
 .ville p {
 
@@ -34,17 +34,26 @@ header .logo img{
 .titre h1 {
 
     font-size: 25px;
-}
+} 
 .titre button {
 
     width: 100%;
     margin-right: 10px;
     font-size: 20px;
-    background-image: none;
-    background-color: white;
-    border: 2px solid #9256dcfc;
-    color: black;
-}
+    background-image: linear-gradient(to bottom right,#9256dce0, #ff79d9e0 );
+    color: white;
+    border-radius: 35px ;
+    box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.664);
+} 
+button:hover {
+        
+        cursor: pointer;
+        background-image: linear-gradient(to bottom right, #ff79d9e0, #9256dce0 );
+        box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.826);       
+ 
+   
+}   
+
 /******************** fonctionnement **************************/
 
 .fonctionnement h2 {
@@ -134,4 +143,4 @@ header .logo img{
     margin-top: 25px;
 }
 
-}
+} 

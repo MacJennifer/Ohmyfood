@@ -324,6 +324,7 @@ header .logo img {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 .restaurants h2 {
   display: flex;
@@ -337,8 +338,9 @@ header .logo img {
 .restaurants .resto {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 20px;
+  margin-left: auto;
   margin-bottom: 20px;
+  justify-content: center;
 }
 .restaurants .resto .picture {
   position: relative;
@@ -426,7 +428,7 @@ header .logo img {
   opacity: 0;
 }
 .restaurants .resto .nom .coeur .fa-solid:hover {
-  background-image: linear-gradient(to left top, to left bottom, #ff79d9, rgba(146, 86, 220, 0.9882352941));
+  background-image: linear-gradient(to left top, #ff79d9, rgba(146, 86, 220, 0.9882352941));
   opacity: 1;
   cursor: pointer;
 }
