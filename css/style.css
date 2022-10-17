@@ -338,7 +338,7 @@ header .logo img {
 .restaurants .resto {
   display: flex;
   flex-wrap: wrap;
-  margin-left: auto;
+  margin: auto;
   margin-bottom: 20px;
   justify-content: center;
 }
@@ -428,11 +428,19 @@ header .logo img {
   opacity: 0;
 }
 .restaurants .resto .nom .coeur .fa-solid:hover {
-  background-image: linear-gradient(to left top, #ff79d9, rgba(146, 86, 220, 0.9882352941));
+  background-image: linear-gradient(to left top,#ff79d9, rgba(146, 86, 220, 0.9882352941));
   opacity: 1;
   cursor: pointer;
 }
 
+@media screen and (min-width: 660px) {
+  .resto .picture img {
+    border-radius: 15px 0 0 15px;
+  }
+  .restaurants .resto .nom {
+    border-radius: 0px 15px 15px 0;
+  }
+}
 /******************** Footer ***********************/
 footer {
   background-color: rgba(64, 61, 57, 0.8980392157);
