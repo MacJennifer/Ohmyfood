@@ -1,4 +1,4 @@
-@media screen and (min-width: 768px) and (max-width: 991.9px) {
+@media screen and (min-width: 768px) {
   /***************** header *******************/
   header {
     height: 75px;
@@ -21,6 +21,7 @@
   .ville p {
     font-size: 20px;
     margin-left: 50px;
+    text-align: center;
   }
   /************************* titre *************************/
   .titre h1 {

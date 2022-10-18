@@ -158,6 +158,7 @@
      background-clip: text;
      -webkit-background-clip: text;
      opacity: 0;
+     transition: all 600ms ease-in-out;
          &:hover{
              background-image: linear-gradient(to left top, to left bottom, $secondaire , $primaire );
              opacity: 1;

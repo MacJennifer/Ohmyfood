@@ -168,9 +168,10 @@ header .logo img {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
+  transition: all 600ms ease-in-out;
 }
 .titre .image .description .coeur .fa-solid:hover {
-  background-image: linear-gradient(to left top, #ff79d9, rgba(146, 86, 220, 0.9882352941));
+  background-image: linear-gradient(to left top, to left bottom, #ff79d9, rgba(146, 86, 220, 0.9882352941));
   opacity: 1;
   cursor: pointer;
 }
@@ -873,6 +874,7 @@ footer {
   background-color: rgba(40, 40, 43, 0.9333333333);
   padding-bottom: 30px;
   width: 100%;
+  background-color: rgba(64, 61, 57, 0.8980392157);
 }
 footer h3 {
   width: 90%;

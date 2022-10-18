@@ -1,4 +1,4 @@
-@media  screen and (min-width: 768px) and (max-width: 991.9px) {
+@media  screen and (min-width: 768px)/* and (max-width: 991.9px)*/ {
 
 /***************** header *******************/
 header {
@@ -18,16 +18,21 @@ header .logo img{
     text-align: center;
     height: 50px;
     padding-top: 5px;
+   
+    
 }
 .ville i {
 
     font-size: 20px;
     color: black;
+  
 }
 .ville p {
 
         font-size: 20px;
         margin-left: 50px;
+        text-align: center;
+       
 }
 /************************* titre *************************/
 
